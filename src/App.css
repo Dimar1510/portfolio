@@ -53,7 +53,7 @@
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
-    --big-font-size: 2.3rem;
+    --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;

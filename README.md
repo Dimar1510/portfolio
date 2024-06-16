@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 todo:
 
+[ ] components refactor
 [?] refactor css
 [?] dark theme
 [ ] translate
