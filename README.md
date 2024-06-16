@@ -14,7 +14,7 @@ todo:
 [?] dark theme
 [ ] translate
 [ ] sticky header top
-[ ] image
+[ ] images
 [ ] social icons
 [ ] logo
-[ ] 
+[ ] framer motion
