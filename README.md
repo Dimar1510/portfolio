@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 todo:
 
 [ ] components refactor
+[ ] contact form confirmation
 [?] refactor css
 [?] dark theme
 [ ] translate

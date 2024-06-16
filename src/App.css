@@ -116,7 +116,6 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 6rem 0 2rem;
-  min-height: 100vh;
 }
 
 .section__title {
