@@ -1,63 +1,84 @@
-import { useState } from 'react';
-import './header.css'
+import { useRef, useState } from "react";
 
-function Header() {
-    const [showMenu, setShowMenu] = useState(false)
+const HeaderItem = ({ title, icon, href }) => {
+  return (
+    <li>
+      <a
+        href={"#" + href}
+        className="flex gap-1 items-center text-title-clr transition-all duration-300 font-medium text-lg"
+      >
+        <i className={"uil uil-" + icon}></i>
+        {title}
+      </a>
+    </li>
+  );
+};
 
-    return (  
-        <header className='header'>
-            <nav className="nav container">
-                <a href="/" className="nav__logo">Dimar</a>
+export const navItems = [
+  {
+    title: "Навыки",
+    icon: "file-alt",
+    href: "skills",
+  },
+  {
+    title: "Портфолио",
+    icon: "scenery",
+    href: "portfolio",
+  },
+  {
+    title: "Обо мне",
+    icon: "user",
+    href: "about",
+  },
+  {
+    title: "Контакты",
+    icon: "message",
+    href: "contact",
+  },
+];
 
-                <div className={showMenu ? 'nav__menu show-menu' : 'nav__menu'}>
-                    <ul className="nav__list grid">
-                        <li className="nav__item">
-                            <a href="#home" className="nav__link active-link">
-                                <i className="uil uil-estate nav__icon"></i>Home
-                            </a>
-                        </li>
+const Header = ({ inView }) => {
+  const header = useRef(null);
+  // const [showMenu, setShowMenu] = useState(false);
 
-                        <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="uil uil-user nav__icon"></i>About
-                            </a>
-                        </li>
+  return (
+    <header
+      className={`w-full fixed top-0 left-0 z-50  h-16 flex items-center px-4 transition-transform duration-500 backdrop-blur-md
+      ${!inView ? "translate-y-0" : "-translate-y-[110%]"}`}
+      ref={header}
+    >
+      <nav className="flex justify-end items-center gap-4 custom-container">
+        <div>
+          <ul className="flex gap-8 justify-end">
+            <HeaderItem title={"Домой"} icon={"estate"} href={"home"} />
+            {navItems.map((item) => {
+              return (
+                <HeaderItem
+                  title={item.title}
+                  icon={item.icon}
+                  href={item.href}
+                  key={item.title}
+                />
+              );
+            })}
+          </ul>
+          {/* <div className="hidden tablet:block">
+            <i
+              className="uil uil-times nav__close"
+              onClick={() => setShowMenu(!showMenu)}
+            ></i>
+          </div> */}
+        </div>
 
-                        <li className="nav__item">
-                            <a href="#skills" className="nav__link">
-                                <i className="uil uil-file-alt nav__icon"></i>Skills
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#services" className="nav__link">
-                                <i className="uil uil-briefcase-alt nav__icon"></i>Services
-                            </a>
-                        </li>
-                        
-                        <li className="nav__item">
-                            <a href="#portfolio" className="nav__link">
-                                <i className="uil uil-scenery nav__icon"></i>Portfolio
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#contact" className="nav__link">
-                                <i className="uil uil-message nav__icon"></i>Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <i className="uil uil-times nav__close" 
-                        onClick={() => setShowMenu(!showMenu)}></i>
-                </div>
-
-                <div className="nav__toggle" onClick={() => setShowMenu(!showMenu)}>
-                    <i className="uil uil-apps"></i>
-                </div>
-            </nav>
-        </header>
-    );
-}
+        {/* <div
+          className="hidden tablet:block font-medium"
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <i className="uil uil-apps"></i>
+        </div> */}
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

@@ -1,16 +1,21 @@
 import SvgScroll from "../../assets/icons/Scroll";
+import { forwardRef } from "react";
 
+import { motion } from "framer-motion";
 
-function ScrollDown() {
-    return (  
-        <div className="home__scroll">
-            <a href="#about" className="home__scroll-button button--flex">
-                <SvgScroll/>
-                <span className="home__scroll-name">Scroll down</span>
-                <i className="uil uil-arrow-down home__scroll-arrow"></i>
-            </a>
-        </div>
-    );
-}
+const ScrollDown = forwardRef(({}, ref) => {
+  return (
+    <div className="mt-8" ref={ref}>
+      <a
+        href="#skills"
+        className="flex items-center gap-1 hover:scale-105 transition-transform w-fit py-2"
+      >
+        <SvgScroll />
+        <span className="text-title-clr font-medium">Листай вниз</span>
+        <i className="uil uil-arrow-down text-xl text-title-clr"></i>
+      </a>
+    </div>
+  );
+});
 
-export default ScrollDown;
+export const MScrollDown = motion(ScrollDown);
