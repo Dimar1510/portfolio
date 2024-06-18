@@ -1,19 +1,7 @@
 import { motion } from "framer-motion";
 import { navItems } from "../header/Header";
 import { MScrollDown } from "./ScrollDown";
-
-const HeroLink = ({ title, href }) => {
-  return (
-    <a
-      href={"#" + href}
-      className="uppercase border border-solid border-title-clr px-3 py-1 rounded-md bg-transparent transition-colors relative z-10 duration-300 overflow-hidden
-        hover:text-accent-clr hover:border-title-clr 
-        before:hover:scale-x-100 before:origin-left before:transition-transform before:bg-title-clr before:border-title-clr before:absolute before:left-0 before:top-0 before:w-full before:h-full before:scale-x-0 before:-z-10 before:duration-300"
-    >
-      {title}
-    </a>
-  );
-};
+import ButtonLink from "../buttons/ButtonLink";
 
 const textAnimation = {
   hidden: {
@@ -46,7 +34,7 @@ const Hero = ({ refer }) => {
             variants={textAnimation}
             className="font-medium text-4xl"
           >
-            <span className="text-accent-clr">Fullstack</span> Разработчик
+            <span className="text-accent-clr">Frontend</span> Разработчик
           </motion.h2>
 
           <motion.p
@@ -66,11 +54,9 @@ const Hero = ({ refer }) => {
           >
             {navItems.map((item) => {
               return (
-                <HeroLink
-                  title={item.title}
-                  href={item.href}
-                  key={item.title}
-                />
+                <ButtonLink href={"#" + item.href} key={item.title}>
+                  {item.title}
+                </ButtonLink>
               );
             })}
           </motion.div>

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
 export default {
   darkMode: "selector",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -39,20 +40,19 @@ export default {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
-      const newUtils = {
+    plugin(({ addComponents, theme }) => {
+      addComponents({
         ".custom-container": {
           maxWidth: "1200px",
           width: "100%",
           marginInline: "auto",
         },
         ".section": {
-          padding: "6rem 2rem 2rem",
+          paddingInline: "2rem",
           maxWidth: "1200px",
           marginInline: "auto",
         },
-      };
-      addUtilities(newUtils);
-    },
+      });
+    }),
   ],
 };

@@ -27,8 +27,8 @@ function Skills({}) {
       icon: "bx bxl-react",
     },
     {
-      name: "Redux",
-      icon: "bx bxl-redux",
+      name: "Express",
+      icon: "devicon-express-original",
     },
     {
       name: "TypeScript",
@@ -76,10 +76,10 @@ function Skills({}) {
 
   return (
     <motion.section
-      className="section flex flex-col gap-10"
+      className="section flex flex-col gap-10 py-24"
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.2, once: true }}
+      viewport={{ amount: 0.5, once: true }}
       id="skills"
     >
       <motion.h2
