@@ -41,7 +41,7 @@ const ProjectItem = ({ item }) => {
             <img
               src={item.img}
               alt={item.title}
-              className="size-full object-cover object-top"
+              className="size-full object-cover object-left-top"
             />
           </motion.div>
           <motion.div
