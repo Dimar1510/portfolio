@@ -5,12 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   :root {
     --container-color: #fff;
     --text-color: hsl(0, 0%, 19%);
@@ -29,13 +23,34 @@
     --title-color-dark: #ffffff;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     font-family: var(--body-font);
     color: var(--text-color);
+  }
+
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--body-color);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+  }
+
+  /* scrollbar styling for firefox */
+  @-moz-document url-prefix() {
+    :root {
+      scrollbar-color: var(--accent-color) var(--body-color);
+    }
   }
 
   body,
@@ -69,6 +84,27 @@
 
   h2 {
     @apply text-xl;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 }
 
