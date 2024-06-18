@@ -4,13 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   :root {
     --container-color: #fff;
     --text-color: hsl(0, 0%, 19%);
@@ -57,11 +57,6 @@
     cursor: pointer;
     border: none;
     outline: none;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 
   h1 {
