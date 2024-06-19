@@ -1,18 +1,6 @@
 import { useRef, useState } from "react";
-
-const HeaderItem = ({ title, icon, href }) => {
-  return (
-    <li>
-      <a
-        href={"#" + href}
-        className="flex gap-1 items-center text-title-clr transition-all duration-300 font-medium text-lg"
-      >
-        <i className={"uil uil-" + icon}></i>
-        {title}
-      </a>
-    </li>
-  );
-};
+import ThemeSwitch from "../hero/ThemeSwitch";
+import HeaderItem from "./HeaderItem";
 
 export const navItems = [
   {
@@ -37,7 +25,7 @@ export const navItems = [
   },
 ];
 
-const Header = ({ inView }) => {
+const Header = ({ inView, dark, setDark }) => {
   const header = useRef(null);
   // const [showMenu, setShowMenu] = useState(false);
 
@@ -49,7 +37,7 @@ const Header = ({ inView }) => {
     >
       <nav className="flex justify-end items-center gap-4 custom-container">
         <div>
-          <ul className="flex gap-8 justify-end">
+          <ul className="flex gap-8 justify-end items-center text-lg">
             <HeaderItem title={"Домой"} icon={"estate"} href={"home"} />
             {navItems.map((item) => {
               return (
@@ -61,6 +49,9 @@ const Header = ({ inView }) => {
                 />
               );
             })}
+            <div className="border-title-clr border-2 size-8 flex items-center justify-center rounded-[50%]">
+              <ThemeSwitch dark={dark} setDark={setDark} />
+            </div>
           </ul>
           {/* <div className="hidden tablet:block">
             <i

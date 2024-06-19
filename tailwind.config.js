@@ -33,9 +33,14 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(4rem)" },
         },
+        rotate: {
+          "0%": { transform: "rotate(0)" },
+          "100%": { transform: "rotate(1turn)" },
+        },
       },
       animation: {
         scroll: "scroll 2s ease infinite",
+        rotate: "rotate 1s ease",
       },
     },
   },
