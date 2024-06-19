@@ -14,7 +14,7 @@ todo:
 [?] refactor css
 [?] dark theme
 [ ] translate
-[ ] sticky header top
+[x] sticky header top
 [ ] images
 [ ] social icons
 [ ] logo

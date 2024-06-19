@@ -59,10 +59,8 @@ const ProjectItem = ({ item }) => {
                 </div>
               </ButtonLink>
               <ButtonLink href={item.source} ext={true}>
-                <div className="flex gap-1 items-center">
-                  <i className="bx bx-code-alt"></i>
-                  Исходный код
-                </div>
+                <i className="bx bx-code-alt"></i>
+                Исходный код
               </ButtonLink>
             </div>
           </motion.div>
