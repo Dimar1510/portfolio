@@ -32,21 +32,21 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="section flex flex-col gap-16 py-16"
+      className="section flex flex-col gap-16 py-16 laptop:gap-8"
       id="contact"
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.5, once: true }}
+      viewport={{ amount: 0.4, once: true }}
     >
       <motion.h2
-        className="text-center font-medium text-4xl"
+        className="text-center font-medium text-4xl phone:text-3xl"
         custom={1}
         variants={textAnimation}
       >
         <span className="text-accent-clr">Связаться</span> со мной
       </motion.h2>
 
-      <div className="flex gap-8 items-center">
+      <div className="flex gap-8 items-center laptop:flex-col">
         <motion.div
           className="flex flex-col gap-4 flex-1 items-center"
           custom={2}
@@ -64,7 +64,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-4 flex-1"
+          className="flex flex-col gap-4 flex-1 w-full items-center"
           custom={3}
           variants={textAnimation}
         >

@@ -5,8 +5,8 @@ const HeaderItem = ({ title, icon, href }) => {
         href={"#" + href}
         className="flex gap-1 items-center text-title-clr transition-all duration-300 font-medium uppercase"
       >
-        <i className={"uil uil-" + icon}></i>
-        {title}
+        <i className={"laptop:text-2xl uil uil-" + icon}></i>
+        <span className="laptop:hidden">{title}</span>
       </a>
     </li>
   );

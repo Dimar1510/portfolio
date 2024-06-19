@@ -38,7 +38,7 @@ const ContactForm = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="max-w-[350px] flex flex-col gap-4 relative"
+      className="max-w-[350px] w-full flex flex-col gap-4 relative"
     >
       {load ? <Loading /> : null}
       <FormInput

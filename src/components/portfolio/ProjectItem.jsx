@@ -30,7 +30,7 @@ const ProjectItem = ({ item }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.5, once: true }}
-          className="custom-container h-full m-auto flex items-center justify-center gap-12"
+          className="custom-container h-full m-auto flex items-center justify-center gap-12 laptop:flex-col"
         >
           <motion.div
             variants={cardAnimation}
@@ -41,7 +41,7 @@ const ProjectItem = ({ item }) => {
             <img
               src={item.img}
               alt={item.title}
-              className="size-full object-cover object-left-top"
+              className="size-full object-contain object-left-top"
             />
           </motion.div>
           <motion.div
@@ -49,7 +49,9 @@ const ProjectItem = ({ item }) => {
             variants={cardAnimation}
             style={{ y }}
           >
-            <h2 className="text-7xl">{item.title}</h2>
+            <h2 className="text-7xl laptop:text-accent-clr tablet:text-4xl">
+              {item.title}
+            </h2>
             <p className="text-title-clr text-xl">{item.desc}</p>
             <div className="flex gap-4">
               <ButtonLink href={item.live} ext={true}>

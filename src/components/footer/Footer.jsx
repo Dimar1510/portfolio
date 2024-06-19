@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <footer className="bg-container-clr transition-colors duration-500 border-t-2 border-black/10 py-12">
       <div className="custom-container flex flex-col gap-8">
-        <div className="flex justify-center gap-12">
+        <div className="flex justify-center gap-12 phone:gap-8">
           {links.map((link) => {
             return (
               <FooterSocialItem

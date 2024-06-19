@@ -31,13 +31,13 @@ const Header = ({ inView, dark, setDark }) => {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 z-50  h-16 flex items-center px-4 transition-transform duration-500 backdrop-blur-md
+      className={`w-full fixed top-0 left-0 z-50  h-16 flex items-center px-4 transition-transform duration-500 backdrop-blur-md laptop:backdrop-blur-none laptop:bg-body-clr
       ${!inView ? "translate-y-0" : "-translate-y-[110%]"}`}
       ref={header}
     >
       <nav className="flex justify-end items-center gap-4 custom-container">
-        <div>
-          <ul className="flex gap-8 justify-end items-center text-lg">
+        <div className="flex justify-between w-full px-8 tablet:px-2 ">
+          <ul className="flex gap-8 justify-end items-center text-lg desktop:text-base laptop:justify-between phone:gap-4">
             <HeaderItem title={"Домой"} icon={"estate"} href={"home"} />
             {navItems.map((item) => {
               return (
@@ -49,24 +49,11 @@ const Header = ({ inView, dark, setDark }) => {
                 />
               );
             })}
-            <div className="border-title-clr border-2 size-8 flex items-center justify-center rounded-[50%]">
-              <ThemeSwitch dark={dark} setDark={setDark} />
-            </div>
           </ul>
-          {/* <div className="hidden tablet:block">
-            <i
-              className="uil uil-times nav__close"
-              onClick={() => setShowMenu(!showMenu)}
-            ></i>
-          </div> */}
+          <div className="border-title-clr border-2 size-8 flex items-center justify-center rounded-[50%]">
+            <ThemeSwitch dark={dark} setDark={setDark} />
+          </div>
         </div>
-
-        {/* <div
-          className="hidden tablet:block font-medium"
-          onClick={() => setShowMenu(!showMenu)}
-        >
-          <i className="uil uil-apps"></i>
-        </div> */}
       </nav>
     </header>
   );

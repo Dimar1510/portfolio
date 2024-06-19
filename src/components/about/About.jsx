@@ -18,21 +18,21 @@ function About() {
 
   return (
     <motion.section
-      className="section flex flex-col gap-16 py-16"
+      className="section flex flex-col gap-16 py-16 tablet:py-4"
       id="about"
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.5, once: true }}
+      viewport={{ amount: 0.2, once: true }}
     >
       <motion.h2
-        className="text-center font-medium text-4xl"
+        className="text-center font-medium text-4xl phone:text-3xl"
         custom={1}
         variants={textAnimation}
       >
         Обо <span className="text-accent-clr">мне</span>
       </motion.h2>
 
-      <div className="custom-container flex gap-10 laptop:flex-col">
+      <div className="custom-container flex gap-10 laptop:flex-col laptop:gap-0">
         <motion.div
           className="flex-1 flex items-center justify-center"
           custom={2}
@@ -48,21 +48,20 @@ function About() {
           custom={3}
           variants={textAnimation}
         >
-          <p className="">
+          <p className="text-lg">
             Привет! Меня зовут Дмитрий Мартынов, и я веб-разработчик,
-            увлекающийся созданием креативных, практичных и адаптивных
-            веб-приложений. Стремлюсь к постоянному развитию в сфере
-            веб-технологий, чтобы интегрировать все более сложные и интересные
-            решения. Работая над представленными здесь проектами, я приобрел
-            опыт работы с JavaScript, React, Express, HTML, CSS и Git. Я быстро
-            учусь и всегда стремлюсь расширить свои знания и навыки.
+            увлекающийся созданием креативных, практичных и отзывчивых
+            веб-приложений. Я быстро учусь и всегда стремлюсь расширить свои
+            знания и навыки.
           </p>
-          <p className="">
+          <p className="text-lg">
             В моем портфолио представлены несколько избранных приложений, а по
             ссылке ниже можно ознакомиться со всеми (почти) проектами, над
-            которыми мне приходилось работать, начиная от калькулятора. Моя цель
-            — продолжать совершенствоваться как разработчик и принимать участие
-            в создании качественных и эффективных продуктов.
+            которыми мне приходилось работать.
+          </p>
+          <p className="text-lg">
+            Моя цель — продолжать совершенствоваться как разработчик и принимать
+            участие в создании качественных и эффективных продуктов.
           </p>
           <motion.div
             className="flex gap-4"

@@ -31,21 +31,25 @@ const iconAnimation = {
 const Hero = ({ refer, dark, setDark }) => {
   return (
     <section className="min-h-svh flex items-center section" id="home">
-      <div className="flex flex-col gap-28 px-10">
+      <div className="flex flex-col gap-28 px-10 tablet:px-2">
         <motion.div
           initial="hidden"
           whileInView="visible"
           className="flex flex-col gap-8"
           viewport={{ once: true }}
         >
-          <motion.h1 custom={1} variants={textAnimation} className="text-6xl">
+          <motion.h1
+            custom={1}
+            variants={textAnimation}
+            className="text-6xl tablet:text-4xl"
+          >
             Дмитрий Мартынов
           </motion.h1>
 
           <motion.h2
             custom={2}
             variants={textAnimation}
-            className="font-medium text-4xl"
+            className="font-medium text-4xl tablet:text-3xl"
           >
             <span className="text-accent-clr">Frontend</span> Разработчик
           </motion.h2>
@@ -60,7 +64,7 @@ const Hero = ({ refer, dark, setDark }) => {
           </motion.p>
 
           <motion.div
-            className="flex gap-4"
+            className="flex gap-4 laptop:grid laptop:grid-cols-2"
             custom={4}
             variants={textAnimation}
             ref={refer}

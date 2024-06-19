@@ -5,9 +5,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      phone: { max: "350px" },
+      phone: { max: "400px" },
 
-      tablet: { max: "600px" },
+      tablet: { max: "550px" },
 
       laptop: { max: "768px" },
 
@@ -53,7 +53,7 @@ export default {
           marginInline: "auto",
         },
         ".section": {
-          paddingInline: "2rem",
+          paddingInline: "1rem",
           maxWidth: "1200px",
           marginInline: "auto",
         },

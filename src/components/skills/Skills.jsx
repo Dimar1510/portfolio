@@ -27,17 +27,20 @@ function Skills({}) {
   };
 
   return (
-    <section className="section flex flex-col gap-60 py-24" id="skills">
+    <section
+      className="section flex flex-col gap-60 py-24 laptop:gap-28 laptop:py-12"
+      id="skills"
+    >
       <motion.div
         className="flex flex-col gap-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5, once: true }}
+        viewport={{ amount: 0.4, once: true }}
       >
         <motion.h2
           custom={1}
           variants={textAnimation}
-          className="text-center font-medium text-4xl"
+          className="text-center font-medium text-4xl phone:text-3xl"
         >
           <span className="text-accent-clr">Стек</span> технологий
         </motion.h2>
@@ -45,7 +48,7 @@ function Skills({}) {
         <motion.div
           custom={2}
           variants={textAnimation}
-          className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10"
+          className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-10"
         >
           {skills.map((item, index) => {
             return (
@@ -65,7 +68,7 @@ function Skills({}) {
         className="flex flex-col gap-16 "
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.5, once: true }}
+        viewport={{ amount: 0.4, once: true }}
       >
         <motion.h2
           custom={1}
@@ -78,7 +81,7 @@ function Skills({}) {
         <motion.div
           custom={2}
           variants={textAnimation}
-          className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10"
+          className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-10"
         >
           {tools.map((item, index) => {
             return (
