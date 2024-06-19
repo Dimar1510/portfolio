@@ -51,16 +51,20 @@ function About() {
           variants={textAnimation}
         >
           <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            dolore assumenda ullam quasi inventore sapiente, quibusdam nemo
-            commodi tenetur dicta iusto doloremque quisquam! Dolorum non eum
-            sint voluptatum tempore velit.
+            Привет! Меня зовут Дмитрий Мартынов, и я веб-разработчик,
+            увлекающийся созданием креативных, практичных и адаптивных
+            веб-приложений. Стремлюсь к постоянному развитию в сфере
+            веб-технологий, чтобы интегрировать все более сложные и интересные
+            решения. Работая над представленными здесь проектами, я приобрел
+            опыт работы с JavaScript, React, Express, HTML, CSS и Git. Я быстро
+            учусь и всегда стремлюсь расширить свои знания и навыки.
           </p>
           <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            dolore assumenda ullam quasi inventore sapiente, quibusdam nemo
-            commodi tenetur dicta iusto doloremque quisquam! Dolorum non eum
-            sint voluptatum tempore velit.
+            В моем портфолио представлены несколько избранных приложений, а по
+            ссылке ниже можно ознакомиться со всеми (почти) проектами, над
+            которыми мне приходилось работать, начиная от калькулятора. Моя цель
+            — продолжать совершенствоваться как разработчик и принимать участие
+            в создании качественных и эффективных продуктов.
           </p>
           <motion.div
             className="flex gap-4"
