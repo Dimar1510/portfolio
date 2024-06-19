@@ -28,7 +28,7 @@ function Skills({}) {
 
   return (
     <section
-      className="section flex flex-col gap-60 py-24 laptop:gap-28 laptop:py-12"
+      className="section flex flex-col gap-60 py-24 laptop:gap-28 laptop:py-14"
       id="skills"
     >
       <motion.div

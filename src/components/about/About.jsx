@@ -18,7 +18,7 @@ function About() {
 
   return (
     <motion.section
-      className="section flex flex-col gap-16 py-16 tablet:py-4"
+      className="section flex flex-col gap-16 py-16 tablet:pb-4 tablet:pt-14"
       id="about"
       initial="hidden"
       whileInView="visible"
