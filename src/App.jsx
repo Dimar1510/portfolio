@@ -4,7 +4,6 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import ScrollTop from "./components/scrolltop/ScrollTop";
 import { useInView } from "react-intersection-observer";
 import Portfolio from "./components/portfolio/Portfolio";
 import { ReactLenis } from "lenis/react";
@@ -61,7 +60,6 @@ function App() {
           <Contact />
         </main>
         <Footer />
-        <ScrollTop />
       </div>
     </ReactLenis>
   );
