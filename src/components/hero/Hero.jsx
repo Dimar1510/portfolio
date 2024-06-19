@@ -77,8 +77,12 @@ const Hero = ({ refer, dark, setDark }) => {
             <motion.div className="" custom={5} variants={iconAnimation}>
               <ScrollDown />
             </motion.div>
-            <motion.div className="" custom={6} variants={iconAnimation}>
-              <ThemeSwitch dark={dark} setDark={setDark} size={"50"} />
+            <motion.div
+              className="text-[50px] inline-flex"
+              custom={6}
+              variants={iconAnimation}
+            >
+              <ThemeSwitch dark={dark} setDark={setDark} />
             </motion.div>
           </div>
         </motion.div>

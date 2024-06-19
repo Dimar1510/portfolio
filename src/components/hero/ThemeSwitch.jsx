@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-const ThemeSwitch = memo(({ dark, setDark, size }) => {
+const ThemeSwitch = ({ dark, setDark }) => {
   const ref = useRef(null);
   useEffect(() => {
     dark
@@ -11,14 +11,14 @@ const ThemeSwitch = memo(({ dark, setDark, size }) => {
   return (
     <button
       ref={ref}
-      className={`transition-transform duration-500 self-end hover:scale-110 will-change-transform ${
-        size ? `text-[${size}px]` : ""
-      }`}
+      className={
+        "transition-transform duration-500 self-end hover:scale-110 will-change-transform"
+      }
       onClick={() => setDark(!dark)}
     >
       {dark ? <i className="bx bx-moon"></i> : <i className="bx bx-sun"></i>}
     </button>
   );
-});
+};
 
 export default ThemeSwitch;

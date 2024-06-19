@@ -1,7 +1,7 @@
-import aboutImg from "../../assets/images/web-developer.svg";
 import CV from "../../assets/cv/cv.pdf";
 import ButtonLink from "../buttons/ButtonLink";
 import { motion } from "framer-motion";
+import SvgWebDeveloper from "../../assets/images/WebDeveloper";
 
 function About() {
   const textAnimation = {
@@ -22,7 +22,7 @@ function About() {
       id="about"
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 1, once: true }}
+      viewport={{ amount: 0.5, once: true }}
     >
       <motion.h2
         className="text-center font-medium text-4xl"
@@ -32,17 +32,15 @@ function About() {
         Обо <span className="text-accent-clr">мне</span>
       </motion.h2>
 
-      <div className="custom-container flex flex-wrap gap-10">
+      <div className="custom-container flex gap-10 laptop:flex-col">
         <motion.div
           className="flex-1 flex items-center justify-center"
           custom={2}
           variants={textAnimation}
         >
-          <img
-            src={aboutImg}
-            alt="about image"
-            className="size-[350px] min-w-[250px] object-contain "
-          />
+          <div className="size-[350px] min-w-[250px] object-contain ">
+            <SvgWebDeveloper />
+          </div>
         </motion.div>
 
         <motion.div

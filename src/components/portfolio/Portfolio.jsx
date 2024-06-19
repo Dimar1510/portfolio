@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import ProjectItem from "./ProjectItem";
 import { items } from "./ProjectsData";
 
@@ -23,11 +23,6 @@ const Portfolio = () => {
     offset: ["start end", "end start"],
   });
 
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
-
   return (
     <motion.section
       initial="hidden"
@@ -48,7 +43,7 @@ const Portfolio = () => {
         <motion.div
           custom={2}
           variants={textAnimation}
-          style={{ scaleX }}
+          style={{ scaleX: scrollYProgress }}
           className="h-1 bg-text-clr custom-container mt-4 transition-colors duration-500"
         ></motion.div>
       </div>

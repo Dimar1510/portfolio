@@ -15,18 +15,17 @@ const SvgScroll = (props) => (
   >
     <path
       d="M123.359 79.775v72.843"
-      className="animate-scroll"
+      className="animate-scroll stroke-text-clr"
       style={{
         fill: "none",
-        stroke: "grey",
         strokeWidth: 20,
       }}
     />
     <path
+      className="stroke-text-clr"
       d="M236.717 123.359C236.717 60.794 185.923 10 123.359 10S10 60.794 10 123.359v143.237c0 62.565 50.794 113.359 113.359 113.359s113.358-50.794 113.358-113.359z"
       style={{
         fill: "none",
-        stroke: "grey",
         strokeWidth: 20,
       }}
     />
