@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { navItems } from "../header/navItems";
 import ScrollDown from "./ScrollDown";
-import ButtonLink from "../buttons/ButtonLink";
+import ButtonLink from "../ui/ButtonLink";
 import ThemeSwitch from "./ThemeSwitch";
 import PropTypes from "prop-types";
 

@@ -1,5 +1,5 @@
 import CV from "../../assets/cv/cv.pdf";
-import ButtonLink from "../buttons/ButtonLink";
+import ButtonLink from "../ui/ButtonLink";
 import { motion } from "framer-motion";
 import SvgWebDeveloper from "../../assets/images/WebDeveloper";
 

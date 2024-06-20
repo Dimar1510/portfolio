@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ButtonLink from "../buttons/ButtonLink";
+import ButtonLink from "../ui/ButtonLink";
 import PropTypes from "prop-types";
 
 const ProjectItem = ({ item }) => {
