@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ButtonLink from "../buttons/ButtonLink";
+import PropTypes from "prop-types";
 
 const ProjectItem = ({ item }) => {
   const ref = useRef();
@@ -73,3 +74,13 @@ const ProjectItem = ({ item }) => {
 };
 
 export default ProjectItem;
+
+ProjectItem.propTypes = {
+  item: PropTypes.shape({
+    img: PropTypes.string,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    live: PropTypes.string,
+    source: PropTypes.string,
+  }),
+};

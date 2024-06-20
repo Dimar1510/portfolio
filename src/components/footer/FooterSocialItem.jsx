@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FooterSocialItem = ({ name, href, icon }) => {
   return (
     <div>
@@ -14,3 +16,9 @@ const FooterSocialItem = ({ name, href, icon }) => {
 };
 
 export default FooterSocialItem;
+
+FooterSocialItem.propTypes = {
+  name: PropTypes.string,
+  href: PropTypes.string,
+  icon: PropTypes.string,
+};

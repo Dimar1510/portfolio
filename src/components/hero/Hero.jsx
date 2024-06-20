@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { navItems } from "../header/Header";
+import { navItems } from "../header/navItems";
 import ScrollDown from "./ScrollDown";
 import ButtonLink from "../buttons/ButtonLink";
 import ThemeSwitch from "./ThemeSwitch";
+import PropTypes from "prop-types";
 
 const textAnimation = {
   hidden: {
@@ -96,3 +97,9 @@ const Hero = ({ refer, dark, setDark }) => {
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  refer: PropTypes.func,
+  dark: PropTypes.bool,
+  setDark: PropTypes.func,
+};

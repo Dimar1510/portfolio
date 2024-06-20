@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const FormInput = ({ type, name, placeholder, load }) => {
   return (
@@ -17,3 +17,10 @@ const FormInput = ({ type, name, placeholder, load }) => {
 };
 
 export default FormInput;
+
+FormInput.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  load: PropTypes.bool,
+};

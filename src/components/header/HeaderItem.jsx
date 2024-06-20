@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const HeaderItem = ({ title, icon, href }) => {
   return (
     <li>
@@ -13,3 +15,9 @@ const HeaderItem = ({ title, icon, href }) => {
 };
 
 export default HeaderItem;
+
+HeaderItem.propTypes = {
+  title: PropTypes.string,
+  icon: PropTypes.string,
+  href: PropTypes.string,
+};

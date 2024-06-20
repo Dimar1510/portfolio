@@ -45,7 +45,7 @@ export default {
     },
   },
   plugins: [
-    plugin(({ addComponents, theme }) => {
+    plugin(({ addComponents }) => {
       addComponents({
         ".custom-container": {
           maxWidth: "1200px",

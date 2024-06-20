@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const ContactCard = ({ value, icon }) => {
   return (
@@ -12,3 +12,8 @@ const ContactCard = ({ value, icon }) => {
 };
 
 export default ContactCard;
+
+ContactCard.propTypes = {
+  value: PropTypes.string,
+  icon: PropTypes.string,
+};

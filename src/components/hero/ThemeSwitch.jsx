@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
 const ThemeSwitch = ({ dark, setDark }) => {
   const ref = useRef(null);
@@ -22,3 +23,8 @@ const ThemeSwitch = ({ dark, setDark }) => {
 };
 
 export default ThemeSwitch;
+
+ThemeSwitch.propTypes = {
+  dark: PropTypes.bool,
+  setDark: PropTypes.func,
+};

@@ -1,33 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import ThemeSwitch from "../hero/ThemeSwitch";
 import HeaderItem from "./HeaderItem";
-
-export const navItems = [
-  {
-    title: "Навыки",
-    icon: "file-alt",
-    href: "skills",
-  },
-  {
-    title: "Портфолио",
-    icon: "scenery",
-    href: "portfolio",
-  },
-  {
-    title: "Обо мне",
-    icon: "user",
-    href: "about",
-  },
-  {
-    title: "Контакты",
-    icon: "message",
-    href: "contact",
-  },
-];
+import { navItems } from "./navItems";
+import PropTypes from "prop-types";
 
 const Header = ({ inView, dark, setDark }) => {
   const header = useRef(null);
-  // const [showMenu, setShowMenu] = useState(false);
 
   return (
     <header
@@ -60,3 +38,9 @@ const Header = ({ inView, dark, setDark }) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  inView: PropTypes.bool,
+  dark: PropTypes.bool,
+  setDark: PropTypes.func,
+};

@@ -3,7 +3,7 @@ import SkillCard from "./SkillCard";
 import { skills } from "./SkillsData";
 import { tools } from "./ToolsData";
 
-function Skills({}) {
+function Skills() {
   const textAnimation = {
     hidden: {
       y: 100,

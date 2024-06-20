@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ButtonLink = ({ href, children, ext }) => {
   return (
     <a
@@ -14,3 +16,9 @@ const ButtonLink = ({ href, children, ext }) => {
 };
 
 export default ButtonLink;
+
+ButtonLink.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node,
+  ext: PropTypes.bool,
+};
