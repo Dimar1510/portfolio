@@ -12,7 +12,7 @@ const Header = ({ inView, dark, setDark }) => {
     <header
       className={twMerge(
         "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 backdrop-blur-md laptop:backdrop-blur-none laptop:bg-body-clr  flex",
-        !inView ? "translate-y-0 top-0" : "-translate-y-[110%] -top-32 "
+        !inView ? "translate-y-0" : "-translate-y-[110%]"
       )}
       ref={header}
     >

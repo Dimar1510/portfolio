@@ -31,6 +31,7 @@ function App() {
   const { ref, inView } = useInView({
     threshold: 1,
     rootMargin: "50px",
+    initialInView: true,
   });
 
   // lenis anchor workaround
