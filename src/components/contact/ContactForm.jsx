@@ -11,6 +11,17 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const name = form.current["name"].value;
+    const email = form.current["email"].value;
+    if (name.trim() === "") {
+      setMessage("Забыли представиться");
+      return;
+    }
+    if (email.trim() === "") {
+      setMessage("Укажите свой email");
+      return;
+    }
+
     setLoad(true);
     emailjs
       .sendForm(
@@ -39,6 +50,7 @@ const ContactForm = () => {
       ref={form}
       onSubmit={sendEmail}
       className="max-w-[350px] w-full flex flex-col gap-4 relative"
+      id="contactform"
     >
       {load ? <Loading /> : null}
       <FormInput
@@ -66,7 +78,9 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <div className="flex justify-between items-center">
-        <div className="ml-2">{load ? "" : message}</div>
+        <div className="ml-2 text-sm text-accent-clr font-light">
+          {load ? "" : message}
+        </div>
         <button
           disabled={load}
           type="submit"
