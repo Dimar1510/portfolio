@@ -16,7 +16,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.10.3"
+    "react-intersection-observer": "^9.10.3",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",

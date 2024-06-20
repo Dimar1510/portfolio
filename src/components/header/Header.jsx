@@ -3,14 +3,17 @@ import ThemeSwitch from "../hero/ThemeSwitch";
 import HeaderItem from "./HeaderItem";
 import { navItems } from "./navItems";
 import PropTypes from "prop-types";
+import { twMerge } from "tailwind-merge";
 
 const Header = ({ inView, dark, setDark }) => {
   const header = useRef(null);
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 z-50  h-16 flex items-center px-4 transition-transform duration-500 backdrop-blur-md laptop:backdrop-blur-none laptop:bg-body-clr
-      ${!inView ? "translate-y-0" : "-translate-y-[110%]"}`}
+      className={twMerge(
+        "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 backdrop-blur-md laptop:backdrop-blur-none laptop:bg-body-clr  flex",
+        !inView ? "translate-y-0 top-0" : "-translate-y-[110%] -top-32 "
+      )}
       ref={header}
     >
       <nav className="flex justify-end items-center gap-4 custom-container">
