@@ -36,14 +36,16 @@ const ProjectItem = ({ item }) => {
           <motion.div
             variants={cardAnimation}
             custom={true}
-            className="flex-1 h-1/2"
+            className="flex-1 h-1/2 flex justify-center items-center"
             ref={ref}
           >
-            <img
-              src={item.img}
-              alt={item.title}
-              className="size-full object-contain object-left-top"
-            />
+            <div className="-m-2 w-full  rounded-xl bg-gradient-to-tr from-gray-700 to-gray-500 p-2 ring-1 ring-inset ring-gray-900/10 ">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="rounded-md shadow-2xl ring-1 ring-gray-900/10 size-full object-cover object-center max-h-[500px]"
+              />
+            </div>
           </motion.div>
           <motion.div
             className="flex-1 flex flex-col gap-8"
