@@ -4,7 +4,7 @@ const ScrollDown = () => {
   return (
     <div>
       <a
-        href="#skills"
+        href="#about"
         className="flex items-center gap-1 hover:scale-105 transition-transform duration-300 w-fit py-2 will-change-transform"
       >
         <SvgScroll />

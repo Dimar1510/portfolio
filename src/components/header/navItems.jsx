@@ -1,5 +1,10 @@
 export const navItems = [
   {
+    title: "Обо мне",
+    icon: "user",
+    href: "about",
+  },
+  {
     title: "Навыки",
     icon: "file-alt",
     href: "skills",
@@ -8,11 +13,6 @@ export const navItems = [
     title: "Портфолио",
     icon: "scenery",
     href: "portfolio",
-  },
-  {
-    title: "Обо мне",
-    icon: "user",
-    href: "about",
   },
   {
     title: "Контакты",

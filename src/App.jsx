@@ -55,9 +55,9 @@ function App() {
         <Header inView={inView} dark={dark} setDark={setDark} />
         <main className="main">
           <Hero refer={ref} dark={dark} setDark={setDark} />
+          <About />
           <Skills />
           <Portfolio />
-          <About />
           <Contact />
         </main>
         <Footer />

@@ -8,8 +8,8 @@ export const skills = [
     icon: "bx bxl-react",
   },
   {
-    name: "Express",
-    icon: "devicon-express-original",
+    name: "Redux Toolkit",
+    icon: "devicon-redux-original",
   },
   {
     name: "TypeScript",
@@ -28,7 +28,11 @@ export const skills = [
     icon: "bx bxl-nodejs",
   },
   {
-    name: "MongoDB",
-    icon: "bx bxl-mongodb",
+    name: "Express",
+    icon: "devicon-express-original",
+  },
+  {
+    name: "Prisma",
+    icon: "devicon-prisma-original",
   },
 ];

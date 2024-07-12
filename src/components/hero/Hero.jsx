@@ -83,7 +83,7 @@ const Hero = ({ refer, dark, setDark }) => {
               <ScrollDown />
             </motion.div>
             <motion.div
-              className="text-[50px] inline-flex"
+              className="text-[35px] inline-flex"
               custom={6}
               variants={iconAnimation}
             >

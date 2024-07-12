@@ -30,7 +30,7 @@ const ProjectItem = ({ item }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.5, once: true }}
+          viewport={{ amount: 0.5 }}
           className="custom-container h-full m-auto flex items-center justify-center gap-12 laptop:flex-col"
         >
           <motion.div

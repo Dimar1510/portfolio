@@ -8,14 +8,6 @@ export const tools = [
     icon: "devicon-webpack-plain",
   },
   {
-    name: "OAuth",
-    icon: "devicon-oauth-plain",
-  },
-  {
-    name: "TypeScript",
-    icon: "bx bxl-typescript",
-  },
-  {
     name: "Postman",
     icon: "devicon-postman-plain",
   },
