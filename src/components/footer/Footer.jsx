@@ -4,7 +4,7 @@ import CV from "../../assets/cv/cv.pdf";
 const links = [
   {
     name: "Github",
-    href: "https://github.com/Dimar1510",
+    href: "https://github.com/Dimar1510/portfolio",
     icon: "devicon-github-original",
   },
   {
