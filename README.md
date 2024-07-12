@@ -1,8 +1,32 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **Description**
 
-Currently, two official plugins are available:
+Personal portfolio with showcasing of acquired skills and most recent projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 🔗 [Live preview](https://dimarportfolio.netlify.app/)
+
+![Preview](public/screen.gif)
+
+### **Features**
+
+- Smooth scrolling
+- Framer Motion animations
+- Dark/light theme
+
+### **Built With**
+
+- React
+- Tailwind
+- Framer Motion
+- Lenis
+- Vite
+
+### Installing and running
+
+```bash
+git clone https://github.com/Dimar1510/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
