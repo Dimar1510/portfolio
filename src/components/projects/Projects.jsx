@@ -36,7 +36,7 @@ function Projects() {
         <h2 className="text-center font-medium text-4xl phone:text-3xl">
           <span className="text-accent-clr">Релевантные</span> проекты
         </h2>
-        <div className="flex flex-wrap gap-2 justify-between">
+        <div className="flex flex-wrap gap-4 justify-center">
           {[...array].map((tag) => (
             <div
               key={tag}
