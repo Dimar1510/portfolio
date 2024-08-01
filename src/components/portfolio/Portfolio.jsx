@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import ProjectItem from "./ProjectItem";
-import { items } from "./ProjectsData";
+import { items } from "../ProjectsData";
 
 const textAnimation = {
   hidden: {
@@ -38,7 +38,7 @@ const Portfolio = () => {
           variants={textAnimation}
           className="text-center font-medium text-4xl phone:text-3xl"
         >
-          Релевантные <span className="text-accent-clr">проекты</span>
+          Избранные <span className="text-accent-clr">проекты</span>
         </motion.h2>
         <motion.div
           custom={2}
@@ -48,9 +48,10 @@ const Portfolio = () => {
         ></motion.div>
       </div>
       <div className="section">
-        {items.map((item) => (
-          <ProjectItem item={item} key={item.title} />
-        ))}
+        {items.map(
+          (item, index) =>
+            index < 3 && <ProjectItem item={item} key={item.title} />
+        )}
       </div>
     </motion.section>
   );

@@ -39,7 +39,7 @@ const ProjectItem = ({ item }) => {
             className="flex-1 h-1/2 flex justify-center items-center"
             ref={ref}
           >
-            <div className="-m-2 w-full  rounded-xl bg-gradient-to-tr from-gray-700 to-gray-500 p-2 ring-1 ring-inset ring-gray-900/10 ">
+            <div className="-m-2 w-full rounded-xl bg-gradient-to-tr from-gray-700 to-gray-500 p-1 ring-1 ring-inset ring-gray-900/10 ">
               <img
                 src={item.img}
                 alt={item.title}

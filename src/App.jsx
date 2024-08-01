@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import Portfolio from "./components/portfolio/Portfolio";
 import { ReactLenis } from "lenis/react";
 import { useEffect, useState } from "react";
+import Projects from "./components/projects/Projects";
 
 function App() {
   // checking theme
@@ -58,6 +59,7 @@ function App() {
           <About />
           <Skills />
           <Portfolio />
+          <Projects />
           <Contact />
         </main>
         <Footer />
