@@ -69,7 +69,7 @@ export const items = [
     source: "https://github.com/Dimar1510/battleship",
     short:
       "Игра 'Морской бой' против компьютера. Противник делает выводы касательно возможного расположения корабля.",
-    tags: ["Vanilla JS", "CSS", "Игра"],
+    tags: ["Vanilla JS", "SCSS", "Игра"],
   },
   {
     title: "Weather App",
@@ -79,7 +79,7 @@ export const items = [
     source: "https://github.com/Dimar1510/weather-app",
     short:
       "Минималистичное приложение прогноза погоды, адаптированное под небольшие экраны.",
-    tags: ["Vanilla JS", "CSS", "API"],
+    tags: ["Vanilla JS", "SCSS", "API"],
   },
   {
     title: "Vanilla JS Todo",
@@ -89,7 +89,7 @@ export const items = [
     source: "https://github.com/Dimar1510/todo",
     short:
       "Приложение для отслеживания задач с возможностью деления их на категории и управления проектами.",
-    tags: ["Vanilla JS", "CSS"],
+    tags: ["Vanilla JS", "SCSS"],
   },
   {
     title: "CV Builder",

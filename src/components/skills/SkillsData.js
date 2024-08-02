@@ -1,7 +1,7 @@
 export const skills = [
   {
-    name: "JavaScript",
-    icon: "bx bxl-javascript",
+    name: "TypeScript",
+    icon: "bx bxl-typescript",
   },
   {
     name: "React",
@@ -11,10 +11,7 @@ export const skills = [
     name: "Redux Toolkit",
     icon: "devicon-redux-original",
   },
-  {
-    name: "TypeScript",
-    icon: "bx bxl-typescript",
-  },
+
   {
     name: "Sass",
     icon: "bx bxl-sass",

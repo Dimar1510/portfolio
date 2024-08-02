@@ -15,4 +15,8 @@ export const tools = [
     name: "Figma",
     icon: "devicon-figma-plain",
   },
+  {
+    name: "Vite",
+    icon: "devicon-vitejs-plain",
+  },
 ];
