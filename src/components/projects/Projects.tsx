@@ -29,7 +29,7 @@ function Projects() {
 
   return (
     <section
-      className="section flex flex-col gap-60 py-24 laptop:gap-28 laptop:py-14"
+      className="section flex flex-col py-24 laptop:gap-28 laptop:py-14"
       id="allProjects"
     >
       <div className="flex flex-col gap-16">
@@ -50,7 +50,7 @@ function Projects() {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
           {filteredItems.length > 0 ? (
             filteredItems.map((item, index) => (
               <ProjectCard

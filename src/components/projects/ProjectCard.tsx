@@ -21,7 +21,7 @@ const ProjectCard: FC<IProject> = ({
         alt={title}
         className="w-[320px] h-[240px] object-cover rounded-md border border-gray-500"
       />
-      <div className="px-4 flex flex-col gap-4 flex-1">
+      <div className="flex flex-col gap-4 flex-1">
         <div className="flex flex-wrap gap-2 ">
           {tags.map((tag, index) => (
             <div key={index} className="border border-text-clr px-2 rounded-md">
