@@ -41,7 +41,7 @@ const ContactForm = () => {
             setLoad(false);
           },
           (error) => {
-            setMessage("Ошибка..." + error.text);
+            setMessage("Ошибка..." + error.message);
             setLoad(false);
           }
         );
