@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import FormInput from "./FormInput";
 import Loading from "./Loading";
@@ -9,42 +9,44 @@ const ContactForm = () => {
   const [load, setLoad] = useState(false);
   const [message, setMessage] = useState("");
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    if (!form.current) return;
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const name: string = form.current["name"];
-    const email: string = form.current["email"];
-    if (name.trim() === "") {
-      setMessage("Забыли представиться");
-      return;
-    }
-    if (email.trim() === "") {
-      setMessage("Укажите свой email");
-      return;
-    }
+    if (form.current) {
+      const formElements = form.current.elements as any;
+      const name = formElements["name"].value;
+      const email = formElements["email"].value;
+      if (name.trim() === "") {
+        setMessage("Забыли представиться");
+        return;
+      }
+      if (email.trim() === "") {
+        setMessage("Укажите свой email");
+        return;
+      }
 
-    setLoad(true);
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+      setLoad(true);
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
 
-        e.currentTarget,
-        {
-          publicKey: import.meta.env.VITE_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          setMessage("Спасибо!");
-          setLoad(false);
-        },
-        (error) => {
-          setMessage("Ошибка..." + error.text);
-          setLoad(false);
-        }
-      );
-    e.currentTarget.reset();
+          form.current,
+          {
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            setMessage("Спасибо!");
+            setLoad(false);
+          },
+          (error) => {
+            setMessage("Ошибка..." + error.text);
+            setLoad(false);
+          }
+        );
+      e.currentTarget.reset();
+    }
   };
   return (
     <form
