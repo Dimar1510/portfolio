@@ -7,8 +7,18 @@ import social from "../assets/images/social.jpg";
 import money from "../assets/images/money.jpg";
 import resume from "../assets/images/resume.jpg";
 import travel from "../assets/images/travel.jpg";
+import portfolio from "../assets/images/portfolio.png";
+export interface IProject {
+  title: string;
+  img: string;
+  desc?: string;
+  live: string;
+  source: string;
+  short?: string;
+  tags: string[];
+}
 
-export const items = [
+export const items: IProject[] = [
   {
     title: "Chirickter",
     img: social,
@@ -18,7 +28,7 @@ export const items = [
     short: "Fullstack приложение, вдохновленное социальной сетью X/Twitter.",
     tags: [
       "MERN Stack",
-      "React TS",
+      "React",
       "NextUI",
       "Redux Toolkit",
       "RTK Query",
@@ -35,11 +45,12 @@ export const items = [
       "Fullstack приложение для отслеживания домашних финансов и ведения статистики.",
     tags: [
       "MERN Stack",
-      "React TS",
+      "React",
       "NextUI",
       "Redux Toolkit",
       "RTK Query",
       "Tailwind",
+      "Framer Motion",
     ],
   },
   {
@@ -49,7 +60,16 @@ export const items = [
     live: "https://coffeeshop-house.netlify.app",
     source: "https://github.com/Dimar1510/shopping-cart",
     short: "Макет интернет-магазина по продаже кофейных зерен.",
-    tags: ["React TS", "Redux Toolkit", "RTK Query", "Tailwind", "MUI", "API"],
+    tags: ["React", "Redux Toolkit", "RTK Query", "Tailwind", "MUI", "API"],
+  },
+  {
+    title: "Portfolio",
+    img: portfolio,
+    desc: "Вы сейчас здесь...",
+    live: "https://dimarportfolio.netlify.app/",
+    source: "https://github.com/Dimar1510/portfolio",
+    short: "Вы сейчас здесь...",
+    tags: ["React", "Tailwind", "Framer Motion"],
   },
   {
     title: "Memory cards",
@@ -59,7 +79,7 @@ export const items = [
     source: "https://github.com/Dimar1510/memory-card",
     short:
       "Простая игра 'на память', смысл которой состоит в том, чтобы не нажать одну и ту же карточку больше одного раза.",
-    tags: ["React TS", "SCSS", "Игра", "API"],
+    tags: ["React", "SCSS", "Игра", "API"],
   },
   {
     title: "Battleship",
@@ -98,7 +118,7 @@ export const items = [
     source: "https://github.com/Dimar1510/cv-project",
     short:
       "Конструктор, позволяющий легко и быстро создать современное резюме для последующей печати или сохранения в PDF.",
-    tags: ["React TS", "Redux Toolkit", "SCSS"],
+    tags: ["React", "Redux Toolkit", "SCSS"],
   },
   {
     title: "Mountain Explorer",
@@ -107,6 +127,6 @@ export const items = [
     source: "https://github.com/Dimar1510/travel-landing",
     short:
       "Лендинг компании, предоставляющей услуги по организации горных экспедиций.",
-    tags: ["React TS", "Tailwind", "Landing"],
+    tags: ["React", "Tailwind", "Landing", "Framer Motion"],
   },
 ];

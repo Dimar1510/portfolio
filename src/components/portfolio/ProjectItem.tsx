@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ButtonLink from "../ui/ButtonLink";
-import PropTypes from "prop-types";
+import { IProject } from "../ProjectsData";
 
-const ProjectItem = ({ item }) => {
-  const ref = useRef();
+const ProjectItem = ({ item }: { item: IProject }) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -13,7 +13,7 @@ const ProjectItem = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   const cardAnimation = {
-    hidden: (custom) => ({
+    hidden: (custom: number) => ({
       x: custom ? -250 : 250,
       opacity: 0,
     }),
@@ -76,13 +76,3 @@ const ProjectItem = ({ item }) => {
 };
 
 export default ProjectItem;
-
-ProjectItem.propTypes = {
-  item: PropTypes.shape({
-    img: PropTypes.string,
-    title: PropTypes.string,
-    desc: PropTypes.string,
-    live: PropTypes.string,
-    source: PropTypes.string,
-  }),
-};

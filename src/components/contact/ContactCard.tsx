@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
-
-const ContactCard = ({ value, icon }) => {
+const ContactCard = ({ value, icon }: { value: string; icon: string }) => {
   return (
     <div>
       <div className="flex gap-4 rounded-xl items-center">
@@ -12,8 +10,3 @@ const ContactCard = ({ value, icon }) => {
 };
 
 export default ContactCard;
-
-ContactCard.propTypes = {
-  value: PropTypes.string,
-  icon: PropTypes.string,
-};

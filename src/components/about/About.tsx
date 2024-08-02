@@ -1,15 +1,15 @@
-import CV from "../../assets/cv/cv.pdf";
+import CV from "src/assets/cv/cv.pdf";
 import ButtonLink from "../ui/ButtonLink";
 import { motion } from "framer-motion";
-import SvgWebDeveloper from "../../assets/images/WebDeveloper";
+import SvgWebDeveloper from "src/assets/images/WebDeveloper";
 
-function About() {
+const About = () => {
   const textAnimation = {
     hidden: {
       y: 100,
       opacity: 0,
     },
-    visible: (custom) => ({
+    visible: (custom: number) => ({
       y: 0,
       opacity: 1,
       transition: { delay: custom * 0.2, duration: 0.5 },
@@ -81,6 +81,6 @@ function About() {
       </div>
     </motion.section>
   );
-}
+};
 
 export default About;

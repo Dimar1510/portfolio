@@ -1,4 +1,4 @@
-export const tools = [
+export const tools: { name: string; icon: string }[] = [
   {
     name: "Git",
     icon: "devicon-git-plain",

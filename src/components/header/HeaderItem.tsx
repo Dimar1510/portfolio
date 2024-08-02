@@ -1,6 +1,12 @@
-import PropTypes from "prop-types";
+import { FC } from "react";
 
-const HeaderItem = ({ title, icon, href }) => {
+interface IProps {
+  title: string;
+  icon: string;
+  href: string;
+}
+
+const HeaderItem: FC<IProps> = ({ title, icon, href }) => {
   return (
     <li>
       <a
@@ -15,9 +21,3 @@ const HeaderItem = ({ title, icon, href }) => {
 };
 
 export default HeaderItem;
-
-HeaderItem.propTypes = {
-  title: PropTypes.string,
-  icon: PropTypes.string,
-  href: PropTypes.string,
-};

@@ -6,7 +6,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { useInView } from "react-intersection-observer";
 import Portfolio from "./components/portfolio/Portfolio";
-import { ReactLenis } from "lenis/react";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import { useEffect, useState } from "react";
 import Projects from "./components/projects/Projects";
 

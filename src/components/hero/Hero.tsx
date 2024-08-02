@@ -3,14 +3,14 @@ import { navItems } from "../header/navItems";
 import ScrollDown from "./ScrollDown";
 import ButtonLink from "../ui/ButtonLink";
 import ThemeSwitch from "./ThemeSwitch";
-import PropTypes from "prop-types";
+import { FC, Ref } from "react";
 
 const textAnimation = {
   hidden: {
     x: -100,
     opacity: 0,
   },
-  visible: (custom) => ({
+  visible: (custom: number) => ({
     x: 0,
     opacity: 1,
     transition: { delay: custom * 0.3, duration: 1 },
@@ -22,14 +22,20 @@ const iconAnimation = {
     y: 100,
     opacity: 0,
   },
-  visible: (custom) => ({
+  visible: (custom: number) => ({
     y: 0,
     opacity: 1,
     transition: { delay: custom * 0.3, duration: 1 },
   }),
 };
 
-const Hero = ({ refer, dark, setDark }) => {
+interface IProps {
+  refer: Ref<HTMLDivElement>;
+  dark: boolean;
+  setDark: (dark: boolean) => void;
+}
+
+const Hero: FC<IProps> = ({ refer, dark, setDark }) => {
   return (
     <section className="min-h-svh flex items-center section" id="home">
       <div className="flex flex-col gap-28 px-10 tablet:px-2">
@@ -97,9 +103,3 @@ const Hero = ({ refer, dark, setDark }) => {
 };
 
 export default Hero;
-
-Hero.propTypes = {
-  refer: PropTypes.func,
-  dark: PropTypes.bool,
-  setDark: PropTypes.func,
-};

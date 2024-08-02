@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
-import { forwardRef } from "react";
-import PropTypes from "prop-types";
+import { FC, ForwardRefRenderFunction, forwardRef } from "react";
 
-const SkillCard = motion(forwardRef(Cards));
+interface IProps {
+  name: string;
+  icon: string;
+}
 
-function Cards({ name, icon }, ref) {
+const Cards: ForwardRefRenderFunction<HTMLDivElement, IProps> = (
+  { name, icon },
+  ref
+) => {
   return (
     <div
       ref={ref}
@@ -15,11 +20,8 @@ function Cards({ name, icon }, ref) {
       {name}
     </div>
   );
-}
+};
+
+const SkillCard = motion(forwardRef(Cards));
 
 export default SkillCard;
-
-Cards.propTypes = {
-  name: PropTypes.string,
-  icon: PropTypes.string,
-};

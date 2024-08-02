@@ -1,6 +1,15 @@
+import { FC } from "react";
 import ButtonLink from "../ui/ButtonLink";
+import { IProject } from "../ProjectsData";
 
-const ProjectCard = ({ title, image, desc, live, source, tags }) => {
+const ProjectCard: FC<IProject> = ({
+  title,
+  img,
+  desc,
+  live,
+  source,
+  tags,
+}) => {
   return (
     <div
       className="flex flex-col items-center justify-center gap-4 w-full border border-gray-50 p-4 rounded-lg shadow-[rgba(0,0,0,0.2)_2px_2px_6px_4px] transition-transform duration-500 will-change-transform
@@ -8,7 +17,7 @@ const ProjectCard = ({ title, image, desc, live, source, tags }) => {
     >
       <img
         loading="lazy"
-        src={image}
+        src={img}
         alt={title}
         className="w-[320px] h-[240px] object-cover rounded-md border border-gray-500"
       />

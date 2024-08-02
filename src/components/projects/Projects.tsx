@@ -3,7 +3,7 @@ import { items } from "../ProjectsData";
 import { useEffect, useState } from "react";
 
 function Projects() {
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filteredItems, setFilteredItems] = useState(items);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function Projects() {
     }
   }, [selectedTags]);
 
-  const handleClick = (tag) => {
+  const handleClick = (tag: string) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags([...selectedTags].filter((item) => item !== tag));
     } else {
@@ -56,7 +56,7 @@ function Projects() {
               <ProjectCard
                 key={index}
                 title={item.title}
-                image={item.img}
+                img={item.img}
                 desc={item.short}
                 live={item.live}
                 source={item.source}

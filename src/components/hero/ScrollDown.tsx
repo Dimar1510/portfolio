@@ -1,4 +1,4 @@
-import SvgScroll from "../../assets/icons/Scroll";
+import SvgScroll from "src/assets/icons/Scroll";
 
 const ScrollDown = () => {
   return (

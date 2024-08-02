@@ -9,7 +9,7 @@ function Skills() {
       y: 100,
       opacity: 0,
     },
-    visible: (custom) => ({
+    visible: (custom: number) => ({
       y: 0,
       opacity: 1,
       transition: { delay: custom * 0.2, duration: 0.5 },
@@ -20,7 +20,7 @@ function Skills() {
     hidden: {
       opacity: 0,
     },
-    visible: (custom) => ({
+    visible: (custom: number) => ({
       opacity: 1,
       transition: { delay: custom * 0.2, duration: 0.5 },
     }),

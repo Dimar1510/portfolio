@@ -1,17 +1,22 @@
-import { useRef } from "react";
+import { FC, useRef } from "react";
 import ThemeSwitch from "../hero/ThemeSwitch";
 import HeaderItem from "./HeaderItem";
 import { navItems } from "./navItems";
-import PropTypes from "prop-types";
 import { twMerge } from "tailwind-merge";
 
-const Header = ({ inView, dark, setDark }) => {
+interface IProps {
+  inView: boolean;
+  dark: boolean;
+  setDark: (dark: boolean) => void;
+}
+
+const Header: FC<IProps> = ({ inView, dark, setDark }) => {
   const header = useRef(null);
 
   return (
     <header
       className={twMerge(
-        "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 backdrop-blur-md laptop:backdrop-blur-none laptop:bg-body-clr  flex",
+        "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 bg-body-clr laptop:backdrop-blur-none laptop:bg-body-clr flex shad",
         !inView ? "translate-y-0" : "-translate-y-[110%]"
       )}
       ref={header}
@@ -31,7 +36,7 @@ const Header = ({ inView, dark, setDark }) => {
               );
             })}
           </ul>
-          <div className="border-title-clr border-2 size-8 flex items-center justify-center rounded-[50%]">
+          <div className="scale-150 flex">
             <ThemeSwitch dark={dark} setDark={setDark} />
           </div>
         </div>
@@ -41,9 +46,3 @@ const Header = ({ inView, dark, setDark }) => {
 };
 
 export default Header;
-
-Header.propTypes = {
-  inView: PropTypes.bool,
-  dark: PropTypes.bool,
-  setDark: PropTypes.func,
-};

@@ -1,5 +1,5 @@
 import FooterSocialItem from "./FooterSocialItem";
-import CV from "../../assets/cv/cv.pdf";
+import CV from "src/assets/cv/cv.pdf";
 
 const links = [
   {

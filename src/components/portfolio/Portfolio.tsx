@@ -8,7 +8,7 @@ const textAnimation = {
     y: 100,
     opacity: 0,
   },
-  visible: (custom) => ({
+  visible: (custom: number) => ({
     y: 0,
     opacity: 1,
     transition: { delay: custom * 0.3, duration: 0.5 },
@@ -16,7 +16,7 @@ const textAnimation = {
 };
 
 const Portfolio = () => {
-  const ref = useRef();
+  const ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,

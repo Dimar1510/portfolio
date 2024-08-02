@@ -4,15 +4,16 @@ import FormInput from "./FormInput";
 import Loading from "./Loading";
 
 const ContactForm = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const [load, setLoad] = useState(false);
   const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    if (!form.current) return;
     e.preventDefault();
-    const name = form.current["name"].value;
-    const email = form.current["email"].value;
+    const name: string = form.current["name"];
+    const email: string = form.current["email"];
     if (name.trim() === "") {
       setMessage("Забыли представиться");
       return;
@@ -28,7 +29,7 @@ const ContactForm = () => {
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
 
-        form.current,
+        e.currentTarget,
         {
           publicKey: import.meta.env.VITE_PUBLIC_KEY,
         }
@@ -39,11 +40,11 @@ const ContactForm = () => {
           setLoad(false);
         },
         (error) => {
-          setMessage("Ошибка...", error.text);
+          setMessage("Ошибка..." + error.text);
           setLoad(false);
         }
       );
-    e.target.reset();
+    e.currentTarget.reset();
   };
   return (
     <form
@@ -71,8 +72,8 @@ const ContactForm = () => {
         <textarea
           disabled={load}
           name="message"
-          cols="30"
-          rows="10"
+          cols={30}
+          rows={10}
           className="absolute top-0 left-0 size-full border-title-clr border bg-transparent transition-colors duration-500 outline-none text-text-clr p-6 z-10 rounded-xl resize-none disabled:cursor-wait disabled:border-gray-400"
           placeholder="Напишите мне что-нибудь"
         ></textarea>

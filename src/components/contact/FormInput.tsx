@@ -1,6 +1,13 @@
-import PropTypes from "prop-types";
+import { FC } from "react";
 
-const FormInput = ({ type, name, placeholder, load }) => {
+interface IProps {
+  type: string;
+  name: string;
+  placeholder: string;
+  load: boolean;
+}
+
+const FormInput: FC<IProps> = ({ type, name, placeholder, load }) => {
   return (
     <div className="relative h-16">
       <input
@@ -16,10 +23,3 @@ const FormInput = ({ type, name, placeholder, load }) => {
 };
 
 export default FormInput;
-
-FormInput.propTypes = {
-  type: PropTypes.string,
-  name: PropTypes.string,
-  placeholder: PropTypes.string,
-  load: PropTypes.bool,
-};

@@ -1,4 +1,4 @@
-export const skills = [
+export const skills: { name: string; icon: string }[] = [
   {
     name: "TypeScript",
     icon: "bx bxl-typescript",

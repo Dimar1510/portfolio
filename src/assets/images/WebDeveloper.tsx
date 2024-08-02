@@ -1,9 +1,8 @@
-const SvgWebDeveloper = (props) => (
+const SvgWebDeveloper = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 400 300"
-    {...props}
   >
     <linearGradient
       id="web-developer_svg__a"

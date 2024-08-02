@@ -1,12 +1,18 @@
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
-const ThemeSwitch = ({ dark, setDark }) => {
-  const ref = useRef(null);
+interface IProps {
+  dark: boolean;
+  setDark: (dark: boolean) => void;
+}
+
+const ThemeSwitch: FC<IProps> = ({ dark, setDark }) => {
+  const ref = useRef<HTMLButtonElement>(null);
   useEffect(() => {
-    dark
-      ? ref.current.classList.add("animate-rotate")
-      : ref.current.classList.remove("animate-rotate");
+    if (ref.current)
+      dark
+        ? ref.current.classList.add("animate-rotate")
+        : ref.current.classList.remove("animate-rotate");
   }, [dark]);
 
   return (
@@ -23,8 +29,3 @@ const ThemeSwitch = ({ dark, setDark }) => {
 };
 
 export default ThemeSwitch;
-
-ThemeSwitch.propTypes = {
-  dark: PropTypes.bool,
-  setDark: PropTypes.func,
-};

@@ -1,4 +1,4 @@
-const SvgScroll = (props) => (
+const SvgScroll = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={32}
@@ -11,7 +11,6 @@ const SvgScroll = (props) => (
       strokeMiterlimit: 1.5,
     }}
     viewBox="0 0 247 390"
-    {...props}
   >
     <path
       d="M123.359 79.775v72.843"

@@ -1,6 +1,12 @@
-import PropTypes from "prop-types";
+import { FC } from "react";
 
-const FooterSocialItem = ({ name, href, icon }) => {
+interface IProps {
+  name: string;
+  href: string;
+  icon: string;
+}
+
+const FooterSocialItem: FC<IProps> = ({ name, href, icon }) => {
   return (
     <div>
       <a
@@ -16,9 +22,3 @@ const FooterSocialItem = ({ name, href, icon }) => {
 };
 
 export default FooterSocialItem;
-
-FooterSocialItem.propTypes = {
-  name: PropTypes.string,
-  href: PropTypes.string,
-  icon: PropTypes.string,
-};
