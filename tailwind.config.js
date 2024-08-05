@@ -24,6 +24,7 @@ export default {
         "title-clr": "var(--title-color)",
         "title-dark-clr": "var(--title-color-dark)",
         "accent-clr": "var(--accent-color)",
+        "shadow-clr": "var(--shadow-color)",
       },
       fontFamily: {
         body: "var(--body-font)",

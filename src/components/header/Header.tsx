@@ -16,7 +16,7 @@ const Header: FC<IProps> = ({ inView, dark, setDark }) => {
   return (
     <header
       className={twMerge(
-        "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 bg-body-clr laptop:backdrop-blur-none laptop:bg-body-clr flex shad",
+        "w-full fixed left-0 z-50  h-16  items-center px-4 transition-transform duration-500 bg-body-clr laptop:backdrop-blur-none laptop:bg-body-clr flex shadow-lg shadow-shadow-clr",
         !inView ? "translate-y-0" : "-translate-y-[110%]"
       )}
       ref={header}

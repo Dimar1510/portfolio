@@ -13,6 +13,7 @@
     --title-color-dark: #000000;
     --body-font: "Exo 2", sans-serif;
     --accent-color: rgb(0, 235, 200);
+    --shadow-color: rgba(0, 0, 0, 0.2);
   }
 
   :root[class~="dark"] {
@@ -21,6 +22,7 @@
     --body-color: hsl(0, 0%, 5%);
     --title-color: hsl(0, 0%, 100%);
     --title-color-dark: #ffffff;
+    --shadow-color: rgba(255, 255, 255, 0.2);
   }
 
   body {
