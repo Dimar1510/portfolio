@@ -32,7 +32,7 @@ const Portfolio = () => {
       className="py-32 laptop:pt-12 tablet:pb-4"
       ref={ref}
     >
-      <div className="sticky top-0 left-0 pt-16 pb-4 text-center bg-body-clr z-10 transition-[background-color] duration-500">
+      <div className="sticky top-0 left-0 pt-20 pb-4 text-center bg-body-clr z-10 transition-[background-color] duration-500">
         <motion.h2
           custom={1}
           variants={textAnimation}
