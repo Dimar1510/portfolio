@@ -1,13 +1,13 @@
 import coffeeshop from "../assets/images/coffeeshop.jpg";
 import cards from "../assets/images/cards.jpg";
 import battleship from "../assets/images/battleship.jpg";
-import weather from "../assets/images/weather.jpg";
 import todo from "../assets/images/todo.jpg";
 import social from "../assets/images/social.jpg";
 import money from "../assets/images/money.jpg";
 import resume from "../assets/images/resume.jpg";
 import travel from "../assets/images/travel.jpg";
 import portfolio from "../assets/images/portfolio.png";
+
 export interface IProject {
   title: string;
   img: string;
@@ -90,16 +90,6 @@ export const items: IProject[] = [
     short:
       "Игра 'Морской бой' против компьютера. Противник делает выводы касательно возможного расположения корабля.",
     tags: ["Vanilla JS", "SCSS", "Игра"],
-  },
-  {
-    title: "Weather App",
-    img: weather,
-    desc: "Минималистичное приложение прогноза погоды, адаптированное под небольшие экраны. Фон меняется в зависимости от времени суток в искомой локации. Используются базовые методы асинхронного JS и работы с API.",
-    live: "https://dimar1510.github.io/weather-app/",
-    source: "https://github.com/Dimar1510/weather-app",
-    short:
-      "Минималистичное приложение прогноза погоды, адаптированное под небольшие экраны.",
-    tags: ["Vanilla JS", "SCSS", "API"],
   },
   {
     title: "Vanilla JS Todo",
